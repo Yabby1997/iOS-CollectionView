@@ -65,5 +65,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return cell
     }
+    
+    // MARK: - CollectionViewDelegate Methods
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let friend = friends[indexPath.item]
+        
+        let textToShare: String = friend.nameAndAge + " " + friend.fullAddress
+
+        let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.addToReadingList]
+        
+        activityViewController.completionWithItemsHandler = { (activity, success, items, error) in
+            if success {
+                print("성공")
+            } else {
+                print("실패")
+            }
+        }
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 
