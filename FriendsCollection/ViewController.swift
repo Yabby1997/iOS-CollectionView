@@ -22,6 +22,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.minimumLineSpacing = 10
+        
+        let halfWidth: CGFloat = UIScreen.main.bounds.width / 2.0
+        flowLayout.itemSize = CGSize(width: halfWidth - 20, height: 110)
+        self.collectionView.collectionViewLayout = flowLayout
+        
+        
         let jsonDecoder: JSONDecoder = JSONDecoder()
         
         guard let dataAsset: NSDataAsset = NSDataAsset(name: "friends") else {
