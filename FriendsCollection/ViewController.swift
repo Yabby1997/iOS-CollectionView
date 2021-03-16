@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
 
     // MARK: - CollectionViewDataSource Methods
@@ -31,6 +32,12 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         
         return cell
+    }
+    
+    // MARK: - CollectionViewDelegate Methods
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.numberOfCells += 1
+        collectionView.reloadData()
     }
 }
 
