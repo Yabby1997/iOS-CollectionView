@@ -13,6 +13,8 @@
 		1D6F16F2260062660097540B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6F16F0260062660097540B /* Main.storyboard */; };
 		1D6F16F4260062690097540B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6F16F3260062690097540B /* Assets.xcassets */; };
 		1D6F16F7260062690097540B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6F16F5260062690097540B /* LaunchScreen.storyboard */; };
+		1D6F1700260066D80097540B /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F16FF260066D80097540B /* FriendCollectionViewCell.swift */; };
+		1D6F170426006A6A0097540B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6F170326006A6A0097540B /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1D6F16F3260062690097540B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D6F16F6260062690097540B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D6F16F8260062690097540B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6F16FF260066D80097540B /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D6F170326006A6A0097540B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				1D6F16EA260062660097540B /* AppDelegate.swift */,
 				1D6F16EC260062660097540B /* SceneDelegate.swift */,
 				1D6F16EE260062660097540B /* ViewController.swift */,
+				1D6F16FF260066D80097540B /* FriendCollectionViewCell.swift */,
 				1D6F16F0260062660097540B /* Main.storyboard */,
 				1D6F16F3260062690097540B /* Assets.xcassets */,
 				1D6F16F5260062690097540B /* LaunchScreen.storyboard */,
 				1D6F16F8260062690097540B /* Info.plist */,
+				1D6F170326006A6A0097540B /* Friend.swift */,
 			);
 			path = FriendsCollection;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6F1700260066D80097540B /* FriendCollectionViewCell.swift in Sources */,
 				1D6F16EF260062660097540B /* ViewController.swift in Sources */,
+				1D6F170426006A6A0097540B /* Friend.swift in Sources */,
 				1D6F16EB260062660097540B /* AppDelegate.swift in Sources */,
 				1D6F16ED260062660097540B /* SceneDelegate.swift in Sources */,
 			);
